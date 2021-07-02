@@ -1,13 +1,16 @@
-from random import randint
 from random import choice
 x=[' ',' ',' ',' ',' ',' ',' ',' ',' ']
 q=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
 z=[]
 a=int(input('Enter - '))
 x[a]='X'
-for i in range(len(x)):
-    if x[i]==' ':z.append(i)
-x[choice(z)]='O'
+if a==0:z = choice([1,3])
+elif a==2:z = choice([1,5])
+elif a==6:z = choice([7,3])
+elif a==8:z = choice([5,7])
+elif a==1 or a==3 or a==5 or a==7:z = 4
+elif a==4:z=choice([0,2,6,8])
+x[z]='O'
 print(x[:3])
 print(x[3:6])
 print(x[6:])
