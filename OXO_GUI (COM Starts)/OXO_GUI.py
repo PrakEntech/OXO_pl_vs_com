@@ -1,7 +1,6 @@
 from tkinter import *
 import tkinter.font as font
 from random import choice,randint
-
 open('turn.bin','w+').write('0')
 
 root = Tk()
